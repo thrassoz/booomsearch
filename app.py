@@ -7,7 +7,12 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-
+        season = ["Λαμπάδες", "λαμπάδες", "ΛΑΜΠΑΔΕΣ", "πασχαλινά", "Πασχαλινά",
+        "ΠΑΣΧΑΛΙΝΑ", "ΛΑΜΠΑΔΑ", "λαμπαδα", "λαμπαδες"
+        ]
+        if request.form['name'] in season:
+            return redirect('https://www.booomtoys.gr/el/epoxiaka/pasxalina')
+        
         if request.form['name'] != '':
             res = requests.get('https://www.booomtoys.gr/el/products-list&product_search=' + request.form['name'])
             page = bs4.BeautifulSoup(res.text, 'html.parser')
