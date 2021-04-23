@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <title>Booom Toys</title>
+</head>
+<body>
+    <h2>Καλώς ήρθατε στην μηχανή αναζήτησης προιόντων του Booom Toys</h2>
+    <form method='POST'>
+        Όνομα Προιόντος: <input type='text' id='name' name='name'><br>
+        Κωδικός Προιόντος: <input type='text' id='code' name='code'><br>
+        Εταιρεία: <input type='text' id='company' name='company'><br>
+        Κατηγορία προιόντος: <select name = "category">
+                                    <option value = "agori" selected>Αγόρι</option>
+                                    <option value = "koritsi">Κορίτσι</option>
+                                    <option value = "loutrina">Λούτρινα</option>
+                            </select>
+        <input type='submit' onclick="myFunction()">
+    </form>
+    <p id='wait'></p>
+    <script>
+        function myFunction(){
+           document.getElementById('wait').innerHTML = 'Παρακαλώ περιμένετε, επεξεργαζόμαστε την αναζήτηση σας!'
+        }
+    </script>
+
+</body>
+</html>
