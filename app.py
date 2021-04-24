@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         season = ["Λαμπάδες", "λαμπάδες", "ΛΑΜΠΑΔΕΣ", "πασχαλινά", "Πασχαλινά",
-        "ΠΑΣΧΑΛΙΝΑ", "ΛΑΜΠΑΔΑ", "λαμπαδα", "λαμπαδες"
+        "ΠΑΣΧΑΛΙΝΑ", "ΛΑΜΠΑΔΑ", "λαμπαδα", "λαμπαδες", "Λαμπαδες", "λαμπάδα", "lampades","lampada", "Lampades", "Lampada", "Λαμπαδα","Λαμπάδα"
         ]
         if request.form['name'] in season:
             return redirect('https://www.booomtoys.gr/el/epoxiaka/pasxalina')
