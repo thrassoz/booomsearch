@@ -39,8 +39,10 @@ def index():
                 return redirect('https://www.booomtoys.gr/el/products-list&product_search=' + request.form['company'], 301)
             else:
                 return render_template('index.html', key=len(results), posted=request.form)
-        else:
+        elif request.form['category'] != '':
             return redirect('https://www.booomtoys.gr/el/' + request.form['category'], 301)
+        else:
+            return render_template('index.html')
     return render_template('index.html')
 
 
