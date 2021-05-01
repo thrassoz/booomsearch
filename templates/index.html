@@ -7,6 +7,7 @@
     <meta name="author" content="colorlib.com">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
     <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -23,7 +24,7 @@
     {%endfor%}
     <div class="s006">
       
-      <form id="form" method="POST">
+      <form target ="_blank" id="form" method="POST" onsubmit="validation()">
         <fieldset>
           <legend id="legend">Πείτε μας τι ψάχνετε?</legend>
           <div id="warning">
@@ -94,5 +95,23 @@
         </fieldset>
       </form>
     </div>
+    <script>
+      function validation(){
+        var form_fields = {
+          "name": $('#name').val(),
+          "code": $('#code').val(),
+          "brand": $('#company').val(),
+          "category": $('#category').val()
+        }
+        var is_not_blank = 0;
+        for(var key in form_fields){
+          if(form_fields[key] != "") is_not_blank++;
+        }
+        if (is_not_blank > 1) {
+          alert("Ουπς, έχετε δύο πεδία συμπληρωμένα!");
+          window.location.reload();
+        }
+      }
+    </script>
   </body>
 </html>
