@@ -66,7 +66,7 @@
                 </button>
                 
                 <select id="category" type="text" name="category">
-                  <option value="" disabled selected>Ανά κατηγορία</option>
+                  <option value="">Ανά κατηγορία</option>
                   <option value="agori">Αγόρι</option>
                   <option value="koritsi">Κορίτσι</option>
                   <option value="epoxiaka">Εποχιακά</option>
@@ -112,7 +112,9 @@
         }
         if (is_not_blank > 1) {
           alert("Ουπς, έχετε δύο πεδία συμπληρωμένα!");
-          window.location.reload();
+          setTimeout(function(){
+            window.location.reload(true);
+          });
         }
       }
     </script>
