@@ -39,6 +39,8 @@ html {
     border:solid 1px #f40701;
   }
 
+  
+
 
 
   
@@ -887,7 +889,7 @@ html {
     padding-top: 1.2%;
   }
   
-  .s006 form .inner-form .input-field input {
+  .s006 form .inner-form .input-field input, select {
     height: 100%;
     width: 100%;
     background: transparent;
@@ -901,22 +903,22 @@ html {
     border-radius: 34px;
   }
   
-  .s006 form .inner-form .input-field input.placeholder {
+  .s006 form .inner-form .input-field input.placeholder,select {
     color: #ccc;
     font-size: 18px;
   }
   
-  .s006 form .inner-form .input-field input:-moz-placeholder {
+  .s006 form .inner-form .input-field input:-moz-placeholder, select {
     color: #ccc;
     font-size: 18px;
   }
   
-  .s006 form .inner-form .input-field input::-webkit-input-placeholder {
+  .s006 form .inner-form .input-field input::-webkit-input-placeholder, select {
     color: #ccc;
     font-size: 18px;
   }
   
-  .s006 form .inner-form .input-field input:hover, .s006 form .inner-form .input-field input:focus {
+  .s006 form .inner-form .input-field input:hover, .s006 form .inner-form .input-field input:focus,select:focus {
     box-shadow: none;
     outline: 0;
   }
@@ -978,7 +980,7 @@ html {
       margin-bottom: 20px;
       height: 50px;
     }
-    .s006 form .inner-form .input-field input {
+    .s006 form .inner-form .input-field input,select {
       padding-left: 55px;
       font-size: 16px;
     }
@@ -987,3 +989,9 @@ html {
       height: 26px;
     }
   }
+
+  select{
+    border:none;
+    color:rgba(0, 0, 0, 0.6);
+  }
+
